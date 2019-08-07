@@ -1,28 +1,23 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <zButton></zButton>
+    <zIcon></zIcon>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import zButton from './components/z-button.vue'
+import zIcon from './components/z-icon.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    zButton,
+    zIcon
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import "@/scss/base.scss";
 </style>
