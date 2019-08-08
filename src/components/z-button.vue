@@ -8,7 +8,7 @@
             :disabled="disabled"
             :class="[
       type ? 'z-button--' + type : '',
-      size ?'z-button'+size:'',
+      size ?'z-button--'+size:'',
       {
         'is-disabled': disabled,
         'is-loading': loading,
@@ -18,16 +18,18 @@
       }
     ]">
         <icon v-if="icon" :icon="icon"></icon>
+        <icon v-if="loading" class="loading" icon="loading"></icon>
         <slot></slot>
     </button>
 </template>
 
 <script>
     import icon from './icon/z-icon'
+
     export default {
         name: 'z-button',
-        components:{
-          icon
+        components: {
+            icon
         },
         props: {
             type: {

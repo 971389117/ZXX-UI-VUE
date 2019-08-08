@@ -1,2 +1,250 @@
 @import "mixins/mixins";
-@import "mixins/button";
+//@import "mixins/button";
+@mixin button-plain($background-color) {
+  // 根据背景色改变整体颜色
+  color: $background-color;
+  background-color: mix($--color-white, $background-color, 90%);
+  border-color: mix($--color-white, $background-color, 60%);
+
+  //当 hover 时，把原背景色展示出来，并将字体变白以显示变化效果
+  &:hover, &:focus {
+    color: $--color-white;
+    background-color: $background-color;
+    border-color: $background-color;
+  }
+
+  //active 要比 hover 颜色深一点才可以显示变化效果，已经是本色了，和黑色搭配让颜色更深
+  &:active {
+    color: $--color-white;
+    background-color: mix($--color-black, $background-color, $--button-active-shade-percent);
+    border-color: mix($--color-black, $background-color, $--button-active-shade-percent);
+  }
+
+  &.is-disabled {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: mix($--color-white, $background-color, 40%);
+      background-color: mix($--color-white, $background-color, 90%);
+      border-color: mix($--color-white, $background-color, 80%);
+    }
+  }
+}
+
+@mixin button-variant($color,$background-color,$border-color) {
+  color: $color;
+  background-color: $background-color;
+  border-color: $border-color;
+
+  &:hover, &:focus {
+    color: $color;
+    //用默认颜色和20%的白色综合一下，起到 hover 的效果
+    background-color: mix($--color-black, $background-color, $--button-hover-tint-percent);
+    border-color: mix($--color-black, $background-color, $--button-hover-tint-percent);
+  }
+  &:active {
+    color: $color;
+    //用默认颜色和10%的白色综合一下， 相对 hover 颜色更重
+    background-color: mix($--color-white, $background-color, $--button-active-shade-percent);
+    border-color: mix($--color-white, $background-color, $--button-active-shade-percent);
+  }
+
+  &.is-disabled {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: $--color-white;
+      background-color: mix($background-color, $--color-white);
+      border-color: mix($border-color, $--color-white);
+    }
+  }
+}
+
+// BUTTON 的构成
+// 1.内部
+// 1.1 色彩
+// 1.2 大小
+// 1.3 装饰
+// 2.外部
+.z-button {
+  //1.1色彩 字体颜色 背景颜色 边框样式
+  color: $--button-default-font-color;
+  background-color: $--button-default-background-color;
+  border: 1px solid $--button-default-border-color;
+
+  //1.2大小 字体大小，padding
+  font-size: inherit;
+  //font-weight: 900;
+  padding: $--button-padding-vertical $--button-padding-horizontal;
+  line-height: 1; //消除行高影响高度
+
+  //1.3 button美观装饰
+  border-radius: 4px;
+  outline: none;
+  transition: .1s;
+  user-select: none;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+
+  //2。 外部表现
+  display: inline-block;
+  box-sizing: border-box;
+
+  & + & {
+    margin-left: 10px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $--color-primary;
+    border-color: $--color-primary-light-7;
+    background-color: $--color-primary-light-9;
+  }
+
+  &:active {
+    color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+    border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+    outline: none;
+  }
+
+  &.is-plain {
+
+  }
+
+  &.is-round {
+    border-radius: 20px;
+    padding: 12px 23px;
+  }
+
+  &.is-circle {
+    border-radius: 50%;
+    padding: $--button-padding-vertical;
+  }
+
+  //disabled 只有一种状态，让用户察觉不到变化，也就是四态合一
+  &.is-disabled {
+    &, &:hover, &:focus, &:active {
+      background-color: $--button-disabled-background-color;
+      color: $--button-disabled-font-color;
+      border-color: $--button-disabled-border-color;
+      cursor: not-allowed;
+      background-image: none;
+    }
+  }
+
+  //loading 时的按钮是无法使用的，加个蒙层，或者也许可以 mix颜色 一下
+  &.is-loading {
+    position: relative;
+    pointer-events: none;
+
+    &:before {
+      pointer-events: none;
+      content: '';
+      position: absolute;
+      left: -1px;
+      top: -1px;
+      right: -1px;
+      bottom: -1px;
+      border-radius: inherit;
+      background-color: rgba(255, 255, 255, .35);
+    }
+
+    > .loading {
+      animation: spin 1.5s linear infinite;
+    }
+  }
+
+  //  不同颜色的按钮
+  &.z-button--primary {
+    @include button-variant($--button-primary-font-color, $--button-primary-background-color, $--button-primary-border-color);
+
+    &.is-plain {
+      @include button-plain($--button-primary-background-color)
+    }
+
+  }
+
+  &.z-button--success {
+    @include button-variant($--button-success-font-color, $--button-success-background-color, $--button-success-border-color);
+
+    &.is-plain {
+      @include button-plain($--button-success-background-color)
+    }
+  }
+
+  &.z-button--info {
+    @include button-variant($--button-info-font-color, $--button-info-background-color, $--button-info-border-color);
+
+    &.is-plain {
+      @include button-plain($--button-info-background-color)
+    }
+  }
+
+  &.z-button--warning {
+    @include button-variant($--button-warning-font-color, $--button-warning-background-color, $--button-warning-border-color);
+
+    &.is-plain {
+      @include button-plain($--button-warning-background-color)
+    }
+  }
+
+  &.z-button--danger {
+    @include button-variant($--button-danger-font-color, $--button-danger-background-color, $--button-danger-border-color);
+
+    &.is-plain {
+      @include button-plain($--button-danger-background-color)
+    }
+  }
+
+  //文字按钮特征
+  //没有边框背景
+  &.z-button--text {
+    border-color: transparent;
+    background-color: transparent;
+    color: $--color-primary;
+
+    &:hover,
+    &:focus {
+      color: mix($--color-white, $--color-primary, $--button-hover-tint-percent);
+      border-color: transparent;
+      background-color: transparent;
+    }
+
+    &:active {
+      color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+      border-color: transparent;
+      background-color: transparent;
+    }
+
+    &.is-disabled,
+    &.is-disabled:hover,
+    &.is-disabled:focus {
+      border-color: transparent;
+      color: #909399;
+    }
+
+  }
+
+  &.z-button--mini{
+    padding: $--button-mini-padding-vertical $--button-mini-padding-horizontal;
+    font-size: $--button-mini-font-size;
+    //border-radius: $--button-mini-border-radius;
+  }
+
+  &.z-button--medium{
+    padding: $--button-medium-padding-vertical $--button-medium-padding-horizontal;
+    font-size: $--button-medium-font-size;
+    //border-radius: $--button-medium-border-radius;
+  }
+
+
+
+  &.z-button--small{
+    padding: $--button-small-padding-vertical $--button-small-padding-horizontal;
+    font-size: $--button-small-font-size;
+    //border-radius: $--button-small-border-radius;
+  }
+}
