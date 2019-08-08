@@ -24,7 +24,7 @@
 </template>
 
 <script>
-    import icon from './icon/z-icon'
+    import icon from '../icon/z-icon'
 
     export default {
         name: 'z-button',

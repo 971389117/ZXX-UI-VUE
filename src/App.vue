@@ -2,124 +2,122 @@
     <div id="app">
         <!--      常规        -->
         <div class="row">
-            <zButton>默认按钮</zButton>
-            <zButton autofocus type="primary" >主要按钮</zButton>
-            <zButton type="success">成功按钮</zButton>
-            <zButton type="info">信息按钮</zButton>
-            <zButton type="warning">警告按钮</zButton>
-            <zButton type="danger">危险按钮</zButton>
+            <z-button>默认按钮</z-button>
+            <z-button autofocus type="primary">主要按钮</z-button>
+            <z-button type="success">成功按钮</z-button>
+            <z-button type="info">信息按钮</z-button>
+            <z-button type="warning">警告按钮</z-button>
+            <z-button type="danger">危险按钮</z-button>
         </div>
-      <!--      简单        -->
-      <div class="row">
-            <zButton plain>朴素按钮</zButton>
-            <zButton type="primary" plain>主要按钮</zButton>
-            <zButton type="success" plain>成功按钮</zButton>
-            <zButton type="info" plain>信息按钮</zButton>
-            <zButton type="warning" plain>警告按钮</zButton>
-            <zButton type="danger" plain>危险按钮</zButton>
-        </div>
-      <!--      圆润        -->
+        <!--      简单        -->
         <div class="row">
-            <zButton round>默认按钮</zButton>
-            <zButton type="primary" round>主要按钮</zButton>
-            <zButton type="success" round>成功按钮</zButton>
-            <zButton type="info" round>信息按钮</zButton>
-            <zButton type="warning" round>警告按钮</zButton>
-            <zButton type="danger" round>危险按钮</zButton>
+            <z-button plain>朴素按钮</z-button>
+            <z-button type="primary" plain>主要按钮</z-button>
+            <z-button type="success" plain>成功按钮</z-button>
+            <z-button type="info" plain>信息按钮</z-button>
+            <z-button type="warning" plain>警告按钮</z-button>
+            <z-button type="danger" plain>危险按钮</z-button>
         </div>
-      <!--      圆形        -->
+        <!--      圆润        -->
         <div class="row">
-            <zButton icon="search" circle></zButton>
-            <zButton type="primary" icon="thumbs-up" circle></zButton>
-            <zButton type="success" icon="email" circle></zButton>
-            <zButton type="info" icon="shangchuan" circle></zButton>
-            <zButton type="warning" icon="star" circle></zButton>
-            <zButton type="danger" icon="success" circle></zButton>
+            <z-button round>默认按钮</z-button>
+            <z-button type="primary" round>主要按钮</z-button>
+            <z-button type="success" round>成功按钮</z-button>
+            <z-button type="info" round>信息按钮</z-button>
+            <z-button type="warning" round>警告按钮</z-button>
+            <z-button type="danger" round>危险按钮</z-button>
         </div>
-      <!--      禁用        -->
+        <!--      圆形        -->
         <div class="row">
-            <zButton disabled>默认按钮</zButton>
-            <zButton type="primary" disabled>主要按钮</zButton>
-            <zButton type="success" disabled>成功按钮</zButton>
-            <zButton type="info" disabled>信息按钮</zButton>
-            <zButton type="warning" disabled>警告按钮</zButton>
-            <zButton type="danger" disabled>危险按钮</zButton>
+            <z-button icon="search" circle></z-button>
+            <z-button type="primary" icon="thumbs-up" circle></z-button>
+            <z-button type="success" icon="email" circle></z-button>
+            <z-button type="info" icon="shangchuan" circle></z-button>
+            <z-button type="warning" icon="star" circle></z-button>
+            <z-button type="danger" icon="success" circle></z-button>
         </div>
-      <!--        混合双打        -->
+        <!--      禁用        -->
         <div class="row">
-            <zButton plain disabled>朴素按钮</zButton>
-            <zButton type="primary" plain disabled>主要按钮</zButton>
-            <zButton type="success" plain disabled>成功按钮</zButton>
-            <zButton type="info" plain disabled>信息按钮</zButton>
-            <zButton type="warning" plain disabled>警告按钮</zButton>
-            <zButton type="danger" plain disabled>危险按钮</zButton>
+            <z-button disabled>默认按钮</z-button>
+            <z-button type="primary" disabled>主要按钮</z-button>
+            <z-button type="success" disabled>成功按钮</z-button>
+            <z-button type="info" disabled>信息按钮</z-button>
+            <z-button type="warning" disabled>警告按钮</z-button>
+            <z-button type="danger" disabled>危险按钮</z-button>
         </div>
-      <div class="row">
-        <zButton round disabled>朴素按钮</zButton>
-        <zButton type="primary" round disabled>主要按钮</zButton>
-        <zButton type="success" round disabled>成功按钮</zButton>
-        <zButton type="info" round disabled>信息按钮</zButton>
-        <zButton type="warning" round disabled>警告按钮</zButton>
-        <zButton type="danger" round disabled>危险按钮</zButton>
-      </div>
-      <div class="row">
-        <zButton icon="search" disabled circle></zButton>
-        <zButton type="primary" icon="thumbs-up" disabled circle></zButton>
-        <zButton type="success" icon="email" disabled circle></zButton>
-        <zButton type="info" icon="shangchuan" disabled circle></zButton>
-        <zButton type="warning" icon="star" disabled circle></zButton>
-        <zButton type="danger" icon="success" disabled circle></zButton>
-      </div>
-      <div class="row">
-        <zButton type="primary" icon="search" ></zButton>
-        <zButton type="primary" icon="thumbs-up" ></zButton>
-        <zButton type="primary" icon="email" ></zButton>
-        <zButton type="primary" icon="shangchuan" >上传</zButton>
-        <zButton type="primary" icon="star" >收藏</zButton>
-        <zButton type="primary" icon="success" ></zButton>
-      </div>
+        <!--        混合双打        -->
+        <div class="row">
+            <z-button plain disabled>朴素按钮</z-button>
+            <z-button type="primary" plain disabled>主要按钮</z-button>
+            <z-button type="success" plain disabled>成功按钮</z-button>
+            <z-button type="info" plain disabled>信息按钮</z-button>
+            <z-button type="warning" plain disabled>警告按钮</z-button>
+            <z-button type="danger" plain disabled>危险按钮</z-button>
+        </div>
+        <div class="row">
+            <z-button round disabled>朴素按钮</z-button>
+            <z-button type="primary" round disabled>主要按钮</z-button>
+            <z-button type="success" round disabled>成功按钮</z-button>
+            <z-button type="info" round disabled>信息按钮</z-button>
+            <z-button type="warning" round disabled>警告按钮</z-button>
+            <z-button type="danger" round disabled>危险按钮</z-button>
+        </div>
+        <div class="row">
+            <z-button icon="search" disabled circle></z-button>
+            <z-button type="primary" icon="thumbs-up" disabled circle></z-button>
+            <z-button type="success" icon="email" disabled circle></z-button>
+            <z-button type="success" icon="shangchuan" disabled circle></z-button>
+            <z-button type="warning" icon="star" disabled circle></z-button>
+            <z-button type="danger" icon="success" disabled circle></z-button>
+        </div>
+        <div class="row">
+            <z-button type="primary" icon="search"></z-button>
+            <z-button type="primary" icon="thumbs-up"></z-button>
+            <z-button type="primary" icon="email"></z-button>
+            <z-button type="primary" icon="shangchuan">上传</z-button>
+            <z-button type="primary" icon="star">收藏</z-button>
+            <z-button type="primary" icon="success"></z-button>
+        </div>
 
-      <zButton type="text">文字按钮</zButton>
-      <zButton type="text" disabled>文字按钮</zButton>
+        <z-button type="text">文字按钮</z-button>
+        <z-button type="text" disabled>文字按钮</z-button>
 
-      <zButton type="primary" :loading="true">加载中</zButton>
+        <z-button type="primary" :loading="true">加载中</z-button>
 
-      <div class="row">
-        <zButton>默认按钮</zButton>
-        <zButton size="medium">中等按钮</zButton>
-        <zButton size="small">小型按钮</zButton>
-        <zButton size="mini">超小按钮</zButton>
-      </div>
-      <div class="row">
-        <zButton round>默认按钮</zButton>
-        <zButton size="medium" round>中等按钮</zButton>
-        <zButton size="small" round>小型按钮</zButton>
-        <zButton size="mini" round>超小按钮</zButton>
-      </div>
-<!--        <zIcon></zIcon>-->
+        <div class="row">
+            <z-button>默认按钮</z-button>
+            <z-button size="medium">中等按钮</z-button>
+            <z-button size="small">小型按钮</z-button>
+            <z-button size="mini">超小按钮</z-button>
+        </div>
+        <div class="row">
+            <z-button round>默认按钮</z-button>
+            <z-button size="medium" round>中等按钮</z-button>
+            <z-button size="small" round>小型按钮</z-button>
+            <z-button size="mini" round>超小按钮</z-button>
+        </div>
+        <!--        <zIcon></zIcon>-->
     </div>
 </template>
 
 <script>
-    import zButton from './components/z-button.vue'
-    import zIcon from './components/icon/z-icon.vue'
 
     export default {
         name: 'app',
         components: {
-            zButton,
-            zIcon
+            // z-button,
         }
     }
 </script>
 
 <style lang="scss">
     @import "@/scss/base.scss";
-  .row{
-    margin: 10px 0;
-  }
+
+    .row {
+        margin: 10px 0;
+    }
 
     html {
-      font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+        font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     }
 </style>
