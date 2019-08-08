@@ -9,7 +9,7 @@
 </template>
 
 <script>
-    import './icon.js'
+    // import './icon.css'
     export default {
         name: 'z-icon',
         props: {

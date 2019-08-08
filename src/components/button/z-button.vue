@@ -17,19 +17,20 @@
         'is-circle': circle
       }
     ]">
-        <icon v-if="icon" :icon="icon"></icon>
-        <icon v-if="loading" class="loading" icon="loading"></icon>
+        <i v-if="icon" class="iconfont" :class="'icon-'+icon"></i>
+<!--        <icon v-if="icon" :icon="icon"></icon>-->
+<!--        <icon v-if="loading" class="loading" icon="loading"></icon>-->
         <slot></slot>
     </button>
 </template>
 
 <script>
-    import icon from '../icon/z-icon'
+    // import icon from '../icon/z-icon';
 
     export default {
         name: 'z-button',
         components: {
-            icon
+            // icon
         },
         props: {
             type: {
@@ -54,3 +55,6 @@
         }
     }
 </script>
+<style lang="scss">
+    @import "../icon/icon.css";
+</style>
