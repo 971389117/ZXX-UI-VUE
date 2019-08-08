@@ -4,11 +4,12 @@
 -->
 <template>
     <svg class="icon" aria-hidden="true">
-        <use :xlink:href=`#icon-${icon}`></use>
+        <use :xlink:href="'#icon-'+icon"></use>
     </svg>
 </template>
 
 <script>
+    import './icon.js'
     export default {
         name: 'z-icon',
         props: {
