@@ -1,0 +1,42 @@
+<!--饿了么写法-->
+<g-tabs label="美女">
+    <g-tabs-item>
+        美女相关资讯
+        ...
+    </g-tabs-item>
+    <g-tabs-item label="世界杯">
+        <template slot="label">
+            世界杯
+            <g-icon></g-icon>
+        </template>
+        世界杯相关资讯
+        ...
+    </g-tabs-item>
+</g-tabs>
+
+<!--我们的实现思路-->
+
+
+<g-tabs selected="tab1">
+    <g-tabs-nav>
+        <g-tabs-item name="tab1"></g-tabs-item>
+        <g-tabs-item name="tab2"></g-tabs-item>
+    </g-tabs-nav>
+    <g-tabs-content>
+        <g-tabs-pane name="tab1"></g-tabs-pane>
+        <g-tabs-pane name="tab2"></g-tabs-pane>
+    </g-tabs-content>
+</g-tabs>
+
+<!--好像不太好-->
+
+<g-tabs>
+    <g-tabs-item>
+        <g-tabs-nav></g-tabs-nav>
+        <g-tabs-content></g-tabs-content>
+    </g-tabs-item>
+    <g-tabs-item>
+        <g-tabs-nav></g-tabs-nav>
+        <g-tabs-content></g-tabs-content>
+    </g-tabs-item>
+</g-tabs>
