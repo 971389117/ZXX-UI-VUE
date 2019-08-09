@@ -3,9 +3,10 @@
 @create 2019-08-08-23:40
 -->
 <template>
-    <div class="z-toast">
-        <div v-html="$slots.default[0]"></div>
-        <div class="line"></div>
+    <div class="z-toast" ref="wrapper">
+        <div  v-if="enableHtml" v-html="$slots.default[0]"></div>
+        <slot v-else></slot>
+        <div class="line" ref="line"></div>
         <span v-if="closeButton" class="close" @click="onCLickClose()">
             {{closeButton.text}}
         </span>
@@ -20,76 +21,88 @@
                 type: Boolean,
                 default: true
             },
-            autoCloseDelay:{
-                type:Number,
-                default:50000
+            autoCloseDelay: {
+                type: Number,
+                default: 50000
             },
-            closeButton:{
-                type:Object,
-                default:()=>{
+            closeButton: {
+                type: Object,
+                default: () => {
                     return {
-                        test:"关闭",
+                        test: '关闭',
                         // callback(toast){
                         //     toast.close()
                         // }
-                        callback:undefined
+                        callback: undefined
                     }
                 }
+            },
+            enableHtml: {
+                type: Boolean,
+                default: false
             }
         },
-        mounted(){
-            if(this.autoClose){
-                setTimeout((()=>{
+        mounted() {
+            if (this.autoClose) {
+                setTimeout((() => {
                     this.close()
-                }),this.autoCloseDelay)
+                }), this.autoCloseDelay)
             }
+            this.$nextTick(()=>{
+                this.$refs.line.style.height=
+                    `${this.$refs.wrapper.getBoundingClientRect().height}px`
+            })
         },
-        created(){
+        created() {
             console.log(this.closeButton)
         },
-        methods:{
-            close(){
+        methods: {
+            close() {
                 this.$el.remove()
                 this.$destroy()
             },
-            log(){
+            log() {
                 console.log('测试')
             },
-            onCLickClose(){
+            onCLickClose() {
                 this.close()
-                if(this.closeButton && typeof this.closeButton.callback === 'function'){
+                if (this.closeButton && typeof this.closeButton.callback === 'function') {
                     this.closeButton.callback(this)
                 }
-            }
+            },
+
         }
     }
 </script>
 
 <style lang='scss' scoped>
-    $font-size:14px;
-    $toast-height:40px;
-    $toast-bg:rgba(0,0,0,.75);
+    $font-size: 14px;
+    $toast-height: 40px;
+    $toast-bg: rgba(0, 0, 0, .75);
     .z-toast {
         position: fixed;
-        top:0;
-        left:50%;
+        top: 0;
+        left: 50%;
         transform: translateX(-50%);
         font-size: $font-size;
         line-height: 1.8;
-        height: $toast-height;
+        min-height: $toast-height;
         display: flex;
         background-color: $toast-bg;
         border-radius: 4px;
-        box-shadow: 0 0 3px 0 rgba(0,0,0,.5);
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, .5);
         align-items: center;
-        color:white;
+        color: white;
         padding: 0 16px;
-        .close{
+
+        .close {
             padding-left: 16px;
+            flex-shrink: 0;
         }
-        .line{
-            height: 100%;
-            border-left: 1px solid #666 ;
+
+        .line {
+            /*height: 100%;*/
+            border-left: 1px solid #666;
             margin-left: 16px;
         }
     }

@@ -118,6 +118,7 @@
         },
         created() {
             this.$toast('<h1>我是 </h1>哈哈', {
+                enableHtml:false,
                 closeButton: {
                     text: '知道了',
                     callback(toast) {
