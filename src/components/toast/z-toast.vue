@@ -4,8 +4,10 @@
 -->
 <template>
     <div class="z-toast" ref="wrapper">
-        <div  v-if="enableHtml" v-html="$slots.default[0]"></div>
-        <slot v-else></slot>
+        <div class="message">
+            <div v-if="enableHtml" v-html="$slots.default[0]"></div>
+            <slot v-else></slot>
+        </div>
         <div class="line" ref="line"></div>
         <span v-if="closeButton" class="close" @click="onCLickClose()">
             {{closeButton.text}}
@@ -23,7 +25,7 @@
             },
             autoCloseDelay: {
                 type: Number,
-                default: 50000
+                default: 52000
             },
             closeButton: {
                 type: Object,
@@ -43,20 +45,26 @@
             }
         },
         mounted() {
-            if (this.autoClose) {
-                setTimeout((() => {
-                    this.close()
-                }), this.autoCloseDelay)
-            }
-            this.$nextTick(()=>{
-                this.$refs.line.style.height=
-                    `${this.$refs.wrapper.getBoundingClientRect().height}px`
-            })
+            this.updateStyle()
+            this.execAutoClose()
         },
         created() {
             console.log(this.closeButton)
         },
         methods: {
+            execAutoClose() {
+                if (this.autoClose) {
+                    setTimeout((() => {
+                        this.close()
+                    }), this.autoCloseDelay)
+                }
+            },
+            updateStyle() {
+                this.$nextTick(() => {
+                    this.$refs.line.style.height =
+                        `${this.$refs.wrapper.getBoundingClientRect().height}px`
+                })
+            },
             close() {
                 this.$el.remove()
                 this.$destroy()
@@ -93,8 +101,10 @@
         box-shadow: 0 0 3px 0 rgba(0, 0, 0, .5);
         align-items: center;
         color: white;
-        padding: 0 16px;
-
+        padding:0  16px;
+        .message{
+            padding: 8px 0;
+        }
         .close {
             padding-left: 16px;
             flex-shrink: 0;

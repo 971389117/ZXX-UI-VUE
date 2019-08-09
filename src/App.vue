@@ -130,7 +130,7 @@
         },
         methods: {
             showToast() {
-                this.$toast('我是 message', {
+                this.$toast('我是 DKSLJDSKAJDSKLAFLJASDKLFJLKkfjkldjKlkjkljf肯德基分开来讲故事科技开发了的撒娇法拉圣诞节福利卡积分message我是 DKSLJDSKAJDSKLAFLJASDKLFJLKkfjkldjKlkjkljf肯德基分开来讲故事科技开发了的撒娇法拉圣诞节福利卡积分message我是 DKSLJDSKAJDSKLAFLJASDKLFJLKkfjkldjKlkjkljf肯德基分开来讲故事科技开发了的撒娇法拉圣诞节福利卡积分message我是 DKSLJDSKAJDSKLAFLJASDKLFJLKkfjkldjKlkjkljf肯德基分开来讲故事科技开发了的撒娇法拉圣诞节福利卡积分message我是 DKSLJDSKAJDSKLAFLJASDKLFJLKkfjkldjKlkjkljf肯德基分开来讲故事科技开发了的撒娇法拉圣诞节福利卡积分message', {
                     closeButton: {
                         text: '知道了',
                         callback(toast) {
