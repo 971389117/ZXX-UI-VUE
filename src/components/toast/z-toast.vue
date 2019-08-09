@@ -3,7 +3,7 @@
 @create 2019-08-08-23:40
 -->
 <template>
-    <div class="z-toast" ref="wrapper">
+    <div class="z-toast" ref="wrapper" :class="toastClasses">
         <div class="message">
             <div v-if="enableHtml" v-html="$slots.default[0]"></div>
             <slot v-else></slot>
@@ -42,6 +42,23 @@
             enableHtml: {
                 type: Boolean,
                 default: false
+            },
+            position:{
+                type:String,
+                default:'top',
+                validator(value){
+                    // 两者都可以
+                    // const pos=['top','bottom','left','right'].includes(value)
+                    const pos=['top','bottom','middle'].indexOf(value)>=0
+                    return pos
+                }
+            }
+        },
+        computed:{
+            toastClasses: function () {
+                return {
+                    [`position-${this.position}`]:true
+            }
             }
         },
         mounted() {
@@ -89,9 +106,7 @@
     $toast-bg: rgba(0, 0, 0, .75);
     .z-toast {
         position: fixed;
-        top: 0;
         left: 50%;
-        transform: translateX(-50%);
         font-size: $font-size;
         line-height: 1.8;
         min-height: $toast-height;
@@ -102,6 +117,20 @@
         align-items: center;
         color: white;
         padding:0  16px;
+        &.position-top{
+            top:0;
+            transform: translateX(-50%);
+        }
+        &.position-bottom{
+            bottom:0;
+            transform: translateX(-50%);
+        }
+        &.position-middle{
+            top:50%;
+            transform: translate(-50%,-50%);
+        }
+
+
         .message{
             padding: 8px 0;
         }
