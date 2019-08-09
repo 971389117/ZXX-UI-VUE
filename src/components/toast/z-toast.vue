@@ -4,7 +4,7 @@
 -->
 <template>
     <div class="z-toast">
-        <slot></slot>
+        <div v-html="$slots.default[0]"></div>
         <div class="line"></div>
         <span v-if="closeButton" class="close" @click="onCLickClose()">
             {{closeButton.text}}
