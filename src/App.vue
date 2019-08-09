@@ -1,5 +1,13 @@
 <template>
     <div id="app">
+
+
+        <button @click="showToast">点我</button>
+
+
+        <hr>
+
+
         <!--      常规        -->
         <div class="row">
             <z-button>默认按钮</z-button>
@@ -107,6 +115,30 @@
         name: 'app',
         components: {
             // z-button,
+        },
+        created() {
+            this.$toast('我是 message', {
+                closeButton: {
+                    text: '知道了',
+                    callback(toast) {
+                        toast.log()
+                        console.log('演得不错')
+                    }
+                }
+            })
+        },
+        methods: {
+            showToast() {
+                this.$toast('我是 message', {
+                    closeButton: {
+                        text: '知道了',
+                        callback(toast) {
+                            toast.log()
+                            console.log('演得不错')
+                        }
+                    }
+                })
+            }
         }
     }
 </script>
