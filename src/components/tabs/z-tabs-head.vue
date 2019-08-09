@@ -3,20 +3,35 @@
 @create 2019-08-09-11:17
 -->
 <template>
-    <div class="z-tabs-header">
-        
+    <div class="z-tabs-head">
+        <slot></slot>
+        <div class="actions-wrapper">
+            <slot name="actions"></slot>
+        </div>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'z-tabs-header'
-
+        name: 'z-tabs-head',
+        inject:['eventBus'],
+        created(){
+            console.log(1)
+            this.$emit('update:selected','tabs-head 抛出的数据')
+        },
     }
 </script>
 
 <style lang='scss' scoped>
-    .z-tabs-header {
-
+    $tab-height:40px;
+    .z-tabs-head {
+        display: flex;
+        height: $tab-height;
+        justify-content: flex-start;
+        align-items: center;
+        border: 1px;
+        >.actions-wrapper{
+            margin-left: auto;
+        }
     }
 </style>

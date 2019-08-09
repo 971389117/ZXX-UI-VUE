@@ -3,14 +3,14 @@
 @create 2019-08-09-12:15
 -->
 <template>
-    <div class="collapse-item">
-        $END$
+    <div class="collapse-item" >
+        <slot></slot>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'collapse-item'
+        name: 'collapse-item',
 
     }
 </script>

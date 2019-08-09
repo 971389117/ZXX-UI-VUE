@@ -2,7 +2,6 @@ import icon from './components/icon/z-icon';
 import button from './components/button/z-button';
 
 
-
 const components = [
     icon,
     button,

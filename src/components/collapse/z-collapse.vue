@@ -4,7 +4,7 @@
 -->
 <template>
     <div class="z-collapse">
-        $END$
+        
     </div>
 </template>
 

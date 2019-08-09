@@ -2,18 +2,33 @@
     <div id="app">
 
 
-        <g-tabs selected="sports">
-            <g-tabs-head>
-            <g-tabs-item name="women">美女</g-tabs-item>
-            <g-tabs-item name="finance">财经</g-tabs-item>
-            <g-tabs-item name="sports">体育</g-tabs-item>
-            </g-tabs-head>
-            <g-tabs-body>
-                <g-tabs-pane name="women">美女相关资讯</g-tabs-pane>
-                <g-tabs-pane name="finance">财经相关资讯</g-tabs-pane>
-                <g-tabs-pane name="sports">体育相关资讯</g-tabs-pane>
-            </g-tabs-body>
-        </g-tabs>
+        <z-tabs :selected.sync="selectedTab" @update:selected="yyy">
+            <z-tabs-head>
+                <template slot="actions">
+                    <button>设置</button>
+                </template>
+                <z-tabs-item name="woman">
+                    <i name="settings"></i>美女
+                </z-tabs-item>
+                <z-tabs-item name="finance" disabled>
+                    财经
+                </z-tabs-item>
+                <z-tabs-item name="sports">
+                    体育
+                </z-tabs-item>
+            </z-tabs-head>
+            <z-tabs-body>
+                <z-tabs-pane name="woman">
+                    美女相关资讯
+                </z-tabs-pane>
+                <z-tabs-pane name="finance">
+                    财经相关资讯
+                </z-tabs-pane>
+                <z-tabs-pane name="sports">
+                    体育相关资讯
+                </z-tabs-pane>
+            </z-tabs-body>
+        </z-tabs>
 
 
         <hr>
@@ -132,6 +147,11 @@
 
     export default {
         name: 'app',
+        data() {
+            return {
+                selectedTab:'sports'
+            }
+        },
         components: {
             // z-button,
         },
@@ -149,6 +169,10 @@
             })
         },
         methods: {
+            yyy(data){
+                console.log('yyy')
+                console.log(data)
+            },
             showToast(position) {
                 this.$toast('我是 DKSLJDSKAJDSKLAFLJASDKLFJLKkfjkldjKlkjkljf肯德基分开来讲故事科技开发了的撒娇法拉圣诞节福利卡积分message我是 DKSLJDSKAJDSKLAFLJASDKLFJLKkfjkldjKlkjkljf肯德基分开来讲故事科技开发了的撒娇法拉圣诞节福利卡积分message我是 DKSLJDSKAJDSKLAFLJASDKLFJLKkfjkldjKlkjkljf肯德基分开来讲故事科技开发了的撒娇法拉圣诞节福利卡积分message我是 DKSLJDSKAJDSKLAFLJASDKLFJLKkfjkldjKlkjkljf肯德基分开来讲故事科技开发了的撒娇法拉圣诞节福利卡积分message我是 DKSLJDSKAJDSKLAFLJASDKLFJLKkfjkldjKlkjkljf肯德基分开来讲故事科技开发了的撒娇法拉圣诞节福利卡积分message', {
                     position,

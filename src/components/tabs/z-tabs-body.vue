@@ -4,13 +4,14 @@
 -->
 <template>
     <div class="z-tabs-body">
-        
+        <slot></slot>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'z-tabs-body'
+        name: 'z-tabs-body',
+        inject:['eventBus'],
 
     }
 </script>
