@@ -2,7 +2,26 @@
     <div id="app">
 
 
-        <button @click="showToast">点我</button>
+        <g-tabs selected="sports">
+            <g-tabs-head>
+            <g-tabs-item name="women">美女</g-tabs-item>
+            <g-tabs-item name="finance">财经</g-tabs-item>
+            <g-tabs-item name="sports">体育</g-tabs-item>
+            </g-tabs-head>
+            <g-tabs-body>
+                <g-tabs-pane name="women">美女相关资讯</g-tabs-pane>
+                <g-tabs-pane name="finance">财经相关资讯</g-tabs-pane>
+                <g-tabs-pane name="sports">体育相关资讯</g-tabs-pane>
+            </g-tabs-body>
+        </g-tabs>
+
+
+        <hr>
+
+
+        <z-button type="primary" @click="showToast('top')">点我 TOP</z-button>
+        <z-button type="primary" @click="showToast('middle')">点我 MIDDLE</z-button>
+        <z-button type="primary" @click="showToast('bottom')">点我 BOTTOM</z-button>
 
 
         <hr>
@@ -118,8 +137,8 @@
         },
         created() {
             this.$toast('<h1>我是 </h1>哈哈', {
-                enableHtml:false,
-                position:"top",
+                enableHtml: false,
+                position: 'bottom',
                 closeButton: {
                     text: '知道了',
                     callback(toast) {
@@ -130,8 +149,9 @@
             })
         },
         methods: {
-            showToast() {
+            showToast(position) {
                 this.$toast('我是 DKSLJDSKAJDSKLAFLJASDKLFJLKkfjkldjKlkjkljf肯德基分开来讲故事科技开发了的撒娇法拉圣诞节福利卡积分message我是 DKSLJDSKAJDSKLAFLJASDKLFJLKkfjkldjKlkjkljf肯德基分开来讲故事科技开发了的撒娇法拉圣诞节福利卡积分message我是 DKSLJDSKAJDSKLAFLJASDKLFJLKkfjkldjKlkjkljf肯德基分开来讲故事科技开发了的撒娇法拉圣诞节福利卡积分message我是 DKSLJDSKAJDSKLAFLJASDKLFJLKkfjkldjKlkjkljf肯德基分开来讲故事科技开发了的撒娇法拉圣诞节福利卡积分message我是 DKSLJDSKAJDSKLAFLJASDKLFJLKkfjkldjKlkjkljf肯德基分开来讲故事科技开发了的撒娇法拉圣诞节福利卡积分message', {
+                    position,
                     closeButton: {
                         text: '知道了',
                         callback(toast) {
