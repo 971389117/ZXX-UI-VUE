@@ -1,6 +1,21 @@
 <template>
     <div id="app">
 
+        <br><br><br><br><br><br><br><br><br><br>
+        <z-popover>
+            <template v-slot:content>
+                <div>哈哈哈 内容智商</div>
+            </template>
+            <button>点我</button>
+        </z-popover>
+        <z-popover>
+            <template v-slot:content>哈哈哈 内容智商</template>
+            <button>点我</button>
+        </z-popover>
+
+
+        <hr>
+
 
         <z-tabs :selected.sync="selectedTab" @update:selected="yyy">
             <z-tabs-head>

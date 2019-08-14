@@ -1,0 +1,54 @@
+<script>
+
+    new Vue({
+        el: '#app',
+        data: {
+            a: 1, firstName: 'Z'
+        },
+        components: {
+            'navigation-link': {
+                template: `
+<a :href="url" class="nav-link">
+    <slot>后备内容</slot>
+</a>`,
+// data(){return {url:"aa"}}
+                props: ['url']
+            },
+            'base-layout': {
+                template: `
+<div class="container">
+    <header>
+        <slot name="header"></slot>
+    </header>
+    <main>
+        <slot></slot>
+    </main>
+    <footer>
+        <slot name="footer"></slot>
+    </footer>
+</div>
+`
+            }，
+'current-user'
+    :
+    {
+        template:`
+<span>
+  <slot v-bind:user="user">
+    {{ user.lastName }}
+  </slot>
+</span>
+`,
+            data()
+        {
+            return {
+                user: {
+                    firstName: 'Z',
+                    lastName: 'xx'
+                }
+            }
+        }
+    }
+    }
+    })
+</script>

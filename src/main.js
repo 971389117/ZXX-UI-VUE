@@ -23,6 +23,9 @@ Vue.use(plugin)
 Vue.config.productionTip = false
 Vue.use(C)
 
+import Popover from './components/popover/popover'
+Vue.component('z-popover',Popover)
+
 new Vue({
   render: h => h(App),
 }).$mount('#app')
