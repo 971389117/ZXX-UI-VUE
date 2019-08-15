@@ -25,6 +25,10 @@ Vue.use(C)
 
 import Popover from './components/popover/popover'
 Vue.component('z-popover',Popover)
+import collapse from './components/collapse/z-collapse'
+import collapseItem from './components/collapse/collapse-item'
+Vue.component('z-collapse',collapse)
+Vue.component('z-collapse-item',collapseItem)
 
 new Vue({
   render: h => h(App),

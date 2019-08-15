@@ -16,7 +16,6 @@
         name: 'z-tabs-head',
         inject:['eventBus'],
         created(){
-            console.log(1)
             this.$emit('update:selected','tabs-head 抛出的数据')
         },
     }
