@@ -68,7 +68,7 @@
             this.execAutoClose()
         },
         created() {
-            console.log(this.closeButton)
+            // console.log(this.closeButton)
         },
         methods: {
             execAutoClose() {

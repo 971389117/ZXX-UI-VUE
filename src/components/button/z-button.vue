@@ -17,27 +17,31 @@
         'is-circle': circle
       }
     ]">
-        <i v-if="icon" class="iconfont" :class="'icon-'+icon"></i>
-<!--        <icon v-if="icon" :icon="icon"></icon>-->
-<!--        <icon v-if="loading" class="loading" icon="loading"></icon>-->
+        <icon v-if="icon" :icon="icon"></icon>
+        <icon v-if="loading" class="loading" icon="loading"></icon>
         <slot></slot>
     </button>
 </template>
 
 <script>
-    // import icon from '../icon/z-icon';
+    import icon from '../icon/z-icon';
 
     export default {
         name: 'z-button',
         components: {
-            // icon
+            icon
         },
         props: {
             type: {
                 type: String,
                 default: 'default'
             },
-            size: String,
+            size: {
+                type: String,
+                validator(value) {
+                    return ['medium', 'small', 'mini'].indexOf(value) > -1
+                }
+            },
             icon: {
                 type: String,
                 default: '',
@@ -49,8 +53,8 @@
             circle: Boolean,
         },
         methods: {
-            handleClick(e) {
-                this.$emit('click', e)
+            handleClick(evt) {
+                this.$emit('click', evt)
             }
         }
     }
