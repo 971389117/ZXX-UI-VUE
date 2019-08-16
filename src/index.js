@@ -1,15 +1,20 @@
-import icon from './components/icon/z-icon';
-import button from './components/button/z-button';
-
-
+import Vue from 'vue'
+import icon from './components/icon';
+import button from './components/button';
+import './scss/settings.scss'
 const components = [
     icon,
     button,
 ]
-const com = {}
-com.install = (Vue) => {
+
+const install = (Vue) => {
     components.forEach(component => {
         Vue.component(component.name, component)
     })
 }
-export default com
+
+export default {install}
+export {
+    icon,
+    button
+}

@@ -187,9 +187,6 @@
                 selectedTab: 'sports'
             }
         },
-        components: {
-            // z-button,
-        },
         created() {
             this.$toast('<h1>我是 </h1>哈哈', {
                 enableHtml: false,
@@ -227,7 +224,6 @@
 </script>
 
 <style lang="scss">
-    @import "@/scss/base.scss";
 
     .row {
         margin: 10px 0;
