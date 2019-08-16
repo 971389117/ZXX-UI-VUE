@@ -1,10 +1,13 @@
 import Vue from 'vue'
 import icon from './components/icon';
 import button from './components/button';
+import input from './components/input';
 import './scss/settings.scss'
+
 const components = [
     icon,
     button,
+    input,
 ]
 
 const install = (Vue) => {
@@ -16,5 +19,6 @@ const install = (Vue) => {
 export default {install}
 export {
     icon,
-    button
+    button,
+    input,
 }

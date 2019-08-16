@@ -2,6 +2,17 @@
     <div id="app">
 
         <br><br><br><br><br><br><br><br><br><br>
+        <z-input></z-input>
+        <z-input placeholder="你好,请输入内容"></z-input>
+        <z-input type="text" placeholder="你好,请输入内容"></z-input>
+        <z-input type='password' placeholder="你好,请输入内容"></z-input>
+        <z-input  icon="search" placeholder="你好,请输入内容"></z-input>
+        <z-input  icon="search" icon-position="right" placeholder="你好,图标在右边"></z-input>
+<!--        <z-input suffix-icon="el-icon-date"></z-input>-->
+
+
+        <hr>
+
 
         <!--            <z-collapse>-->
         <!--                <z-collapse-item title="标题1">内容1</z-collapse-item>-->
@@ -12,24 +23,24 @@
         <hr>
 
 
-        <z-popover trigger="hover">
-            <template v-slot:content>
-                <div>哈哈哈 内容智商</div>
-            </template>
-            <z-button>点我</z-button>
-        </z-popover>
-        <z-popover position="right">
-            <template v-slot:content>哈哈哈 内容智商</template>
-            <z-button>点我</z-button>
-        </z-popover>
-        <z-popover position="bottom">
-            <template v-slot:content>哈哈哈 内容智商</template>
-            <z-button>点我</z-button>
-        </z-popover>
-        <z-popover position="left">
-            <template v-slot:content>哈哈哈 内容智商</template>
-            <z-button>点我</z-button>
-        </z-popover>
+<!--        <z-popover trigger="hover">-->
+<!--            <template v-slot:content>-->
+<!--                <div>哈哈哈 内容智商</div>-->
+<!--            </template>-->
+<!--            <z-button>点我</z-button>-->
+<!--        </z-popover>-->
+<!--        <z-popover position="right">-->
+<!--            <template v-slot:content>哈哈哈 内容智商</template>-->
+<!--            <z-button>点我</z-button>-->
+<!--        </z-popover>-->
+<!--        <z-popover position="bottom">-->
+<!--            <template v-slot:content>哈哈哈 内容智商</template>-->
+<!--            <z-button>点我</z-button>-->
+<!--        </z-popover>-->
+<!--        <z-popover position="left">-->
+<!--            <template v-slot:content>哈哈哈 内容智商</template>-->
+<!--            <z-button>点我</z-button>-->
+<!--        </z-popover>-->
 
         <hr>
 

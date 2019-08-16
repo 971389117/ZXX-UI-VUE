@@ -3,7 +3,7 @@
 @create 2019-08-07-19:52
 -->
 <template>
-    <svg class="icon" aria-hidden="true">
+    <svg class="icon" aria-hidden="true" @click="handleClick">
         <use :xlink:href="'#icon-'+icon"></use>
     </svg>
 </template>
@@ -18,6 +18,11 @@
                 default: ''
             },
         },
+        methods:{
+            handleClick(e){
+                this.$emit('click')
+            }
+        }
     }
 </script>
 
