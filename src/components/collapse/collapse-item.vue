@@ -3,8 +3,8 @@
 @create 2019-08-09-12:15
 -->
 <template>
-    <div class="collapse-item">
-        <div class="title" @click="toglle" :data-name="name">{{title}}</div>
+    <div class="collapse-item" >
+        <div class="title" @click="toggle" :data-name="name">{{title}}</div>
         <div class="content" ref="content" v-if="open">
             <slot></slot>
         </div>
@@ -17,7 +17,7 @@
         props: {
             title: {
                 type: String,
-                default: 0,
+                default: '',
                 require: true
             },
             name: {

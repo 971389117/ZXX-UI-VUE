@@ -27,9 +27,9 @@
             }
         },
         provide(){
-            return {
-                eventBus:this.eventBus
-            }
+                return {
+                    eventBus:this.eventBus
+                }
         },
         mounted() {
             this.eventBus.$emit('update:selected', this.selected)
@@ -38,6 +38,7 @@
                 if (this.single) {
                     selectedCopy = [name]
                 } else {
+                    console.log(selectedCopy,'===',name)
                     selectedCopy.push(name)
                 }
                 this.eventBus.$emit('update:selected', selectedCopy)
