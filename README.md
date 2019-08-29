@@ -1,34 +1,120 @@
-# zxx-ui-least
+# ZXX-UI 
 
-## Project setup
-```
-yarn install
-```
+这是我的 UI,通过学习以及模仿 ele 以及 方方,完成了这个 UI 库.因为我觉得它远远称不上框架,称库也是勉为其难,不过它才只是刚刚开始,它还在成长,它的路🦌还很长.
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+本 UI 库基于 Vue 2 实现,将来 3 发布后可能会追跟.
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+## 项目特点
 
-### Run your tests
-```
-yarn run test
-```
+1. 丰富的单元测试,测试覆盖率90 以上,持续集成等工程概念.
+2. 重构,TDD\BDD,设计模式,单向数据流等技术概念.
+3. Vue 的各种有趣的功能
+4. 自说明的代码,通过不断重构优化,即使没有注释也能看懂.
 
-### Lints and fixes files
-```
-yarn run lint
-```
+## 已完成的轮子
 
-### Run your unit tests
-```
-yarn run test:unit
-```
+按钮,输入框,Toast,Tabs,Popover,手风琴
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 设计思考
+
+### 设计
+
+工具
+1. sektch.app , (语雀)[https://www.yuque.com]
+
+方式
+确定需求,程序流程,搭建骨架,测试,使用
+
+### 配色
+
+最简单的方式是[黑白灰]经典配色,其次可以参考别人成品配色,或者色卡等.下面是一些配色方案.
+(阮一峰 - 普通人的网页配色方案)[http://www.ruanyifeng.com/blog/2019/03/coloring-scheme.html]
+(配色网站 - kuler)[https://color.adobe.com/create]
+另外, 在 少数派 等网站上存在着很多配色攻略,可以自行搜索.
+
+### 网站开发流程
+
+1. 立项 - 确定要做，确定人员，确定预算等
+2. 需求 - 需求收集和分析
+- 收集比分析更难，有的时候用户也不知道自己的需求
+- 亨利·福特曾说过，「如果我最初是问消费者他们想要什么，他们应该是会告诉我，要一匹更快的马！」
+- 可以用「用例图」来分析需求
+3. 可行性分析
+4. 系统设计（功能设计、框架设计）
+- UML 图、时序图等
+5. 原型设计（草图、线框图）
+- 草图用纸和笔画
+- 线框图可以用 Balsamiq
+6. 交互设计
+- 可以用 Axure RP、墨刀、Sketch.app
+7. 视觉设计
+- 可以用 Photoshop、Fireworks、Sketch.app
+8. 程序开发
+9. 测试
+10. 功能预演
+11. 内测
+12. 灰度发布
+13. 正式发布
+
+### 交互设计简介
+
+1. 一致性 Consistency
+
+与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；
+
+在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。
+
+2. 反馈 Feedback
+
+控制反馈：通过界面样式和交互动效让用户可以清晰的感知自己的操作；
+
+页面反馈：操作后，通过页面元素的变化清晰地展现当前状态。
+
+3. 效率 Efficiency
+
+简化流程：设计简洁直观的操作流程；
+
+清晰明确：语言表达清晰且表意明确，让用户快速理解进而作出决策；
+
+帮助用户识别：界面简单直白，让用户快速识别而非回忆，减少用户记忆负担。
+
+4. 可控 Controllability
+
+用户决策：根据场景可给予用户操作建议或安全提示，但不能代替用户进行决策；
+
+结果可控：用户可以自由的进行操作，包括撤销、回退和终止当前操作等。
+
+
+## 发散思维
+
+(写给大家看的设计书)[https://book.douban.com/subject/3323633/]
+(用户体验的要素)[https://book.douban.com/subject/2297549/]
+
+### 做一个优秀的程序员
+
+写文章,造轮子,造福社区
+
+### 从需求出发
+
+我在写代码的时候,由于想要带有一点"处女座"求全思想,有时候存在"设计过度"的问题.**在生活中以及写代码的方方面面,我们应该从需求出发,落到实际,既要高瞻远瞩,走一步看五步,也要避免落入过度思考,忧虑过剩的陷阱,导致浪费不必要的投入.**
+
+### 代码方面的自约定
+
+1.不写废话搬的注释
+2.变量名做到见名知意,尽量用英文,如果实在有问题可以用拼音代替
+3.使用小的功能函数拆分大段代码块
+4.代码整洁干净,易于阅读(就好像小时候写作文,要求卷面干净)
+5.不断重构,优化代码,使代码没有一眼看上去看不懂的代码
+
+### 参考资源
+市面上成熟的 UI 框架,更多可以自行搜索 github 等.
+
+(Framework7)[https://framework7.io/docs/button.html]
+(Ant Design)[https://ant.design/docs/react/introduce-cn]
+(Element UI)[http://element.eleme.io/#/zh-CN/component/installation]
+(iView)[https://www.iviewui.com/docs/guide/install]
+
+方方的资源
+
+(自制 UI 框架 教程)[https://xiedaimala.com/courses/231c66ec-c3e1-42f2-bfd0-5a9470a8a38a#/common]
+(语雀设计稿)[https://www.yuque.com/u29422/gulu/197281/measure]

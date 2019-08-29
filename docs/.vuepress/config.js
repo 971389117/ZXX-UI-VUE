@@ -30,27 +30,20 @@ module.exports = {
             }
         ],
         sidebar: [{
-                title: '梦想',
+                title: '入门',
                 children: [
                     '/',
-                    '/contact',
-                    '/about',
+                    '/安装',
+                    '/快速上手',
                 ]
             },
             {
-                title: '开始',
+                title: '组件',
                 collapsable: false,
                 children: [
-                    '/get-started/',
-                ]
-            },
-            {
-                title: '动物',
-                collapsable: false,
-                children: [
-                    '/components/',
-                    '/components/cat',
-                    '/components/dog',
+                    '/components/button',
+                    '/components/tabs',
+                    '/components/input',
                 ]
             },
         ]
