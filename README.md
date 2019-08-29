@@ -107,17 +107,22 @@
 2. 变量名做到见名知意,尽量用英文,如果实在有问题可以用拼音代替
 3. 使用小的功能函数拆分大段代码块
 4. 代码整洁干净,易于阅读(就好像小时候写作文,要求卷面干净)
-5. 不断重构,优化代码,使代码没有一眼看上去看不懂的代码
+5. 不断重构,优化代码,使得一眼看上去没有看不懂的代码
 
 ### 参考资源
 市面上成熟的 UI 框架,更多可以自行搜索 github 等.
 
 [Framework7](https://framework7.io/docs/button.html)
+
 [Ant Design](https://ant.design/docs/react/introduce-cn)
+
 [Element UI](http://element.eleme.io/#/zh-CN/component/installation)
+
 [iView](https://www.iviewui.com/docs/guide/install)
+
 
 方方的资源
 
 [自制 UI 框架 教程](https://xiedaimala.com/courses/231c66ec-c3e1-42f2-bfd0-5a9470a8a38a#/common)
+
 [语雀设计稿](https://www.yuque.com/u29422/gulu/197281/measure)
