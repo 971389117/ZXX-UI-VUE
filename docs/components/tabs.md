@@ -3,11 +3,8 @@
 <ZXTabs></ZXTabs>  
 
 ```html
-<z-tabs :selected.sync="selectedTab" @update:selected="yyy">
+<z-tabs :selected.sync="selectedTab" >
     <z-tabs-head>
-        <template slot="actions">
-            <button>设置</button>
-        </template>
         <z-tabs-item name="woman">
             <i name="settings"></i>美女
         </z-tabs-item>

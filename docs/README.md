@@ -1,24 +1,5 @@
-# 快速上手
+# ZxxUI
 
-## 安装
+这是我的 UI,通过学习以及模仿 ele 以及 方方,完成了这个 UI 库.因为我觉得它远远称不上框架,称库也是勉为其难,不过它才只是刚刚开始,它还在成长,它的路🦌还很长.
 
-`yarn add zxx-ui-least`
-
-## Hello World
-
-安装全部
-```js
-import ZxxUI from 'zxx-ui-least'
-import Vue from 'vue'
-
-Vue.use(ZxxUI)
-```
-按需引入
-import {button,input} from 'zxx-ui-least'
-import Vue from 'vue'
-
-Vue.use(button)
-Vue.use(input)
-
-完整列表:
-button,input,popover,toast,tabs,collapse
+本 UI 库基于 Vue 2 实现,将来 3 发布后可能会追跟.

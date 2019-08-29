@@ -1,5 +1,4 @@
 const path = require('path')
-console.log(__dirname,'==asdfka')
 module.exports = {
     title: 'zxx-ui-least',
     description: 'Just playing around',
