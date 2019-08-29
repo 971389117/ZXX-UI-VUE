@@ -1,6 +1,6 @@
 {
   "name": "zxx-ui-least",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "main": "src/index.js",
   "scripts": {
     "serve": "vue-cli-service serve",

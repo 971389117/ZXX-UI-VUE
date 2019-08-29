@@ -2,19 +2,19 @@
 
 ## 安装
 
-`yarn add xxx`
+`yarn add zxx-ui-least`
 
 ## Hello World
 
 安装全部
 ```js
-import ZxxUI from 'xxx'
+import ZxxUI from 'zxx-ui-least'
 import Vue from 'vue'
 
 Vue.use(ZxxUI)
 ```
 按需引入
-import {button,input} from 'xxx'
+import {button,input} from 'zxx-ui-least'
 import Vue from 'vue'
 
 Vue.use(button)
