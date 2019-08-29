@@ -27,8 +27,8 @@
         display: flex;
         height: $tab-height;
         justify-content: flex-start;
-        align-items: center;
-        border: 1px;
+        border-bottom: $--tab-border-line;
+
         >.actions-wrapper{
             margin-left: auto;
         }

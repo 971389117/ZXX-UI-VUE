@@ -7,7 +7,7 @@
         <div class="z-input">
             <input ref='input'
                    v-model="value"
-                   :class="iconPosition"
+                   :class="[icP,classObj]"
                    :type="types"
                    class="input-self" :placeholder="placeholder"
                    :disabled="disabled"
@@ -18,7 +18,7 @@
                    @change="handleChange"
             >
             <span class="icon">
-            <i v-if="clear">X</i>
+            <Icon v-if="clear" icon="clear" @click="handleClearInput">X</Icon>
             <Icon v-else-if="password" icon="eye" @click="handleShowPassword"></Icon>
             <Icon v-else-if="icon" :icon="icon"></Icon>
         </span>
@@ -73,10 +73,24 @@
         },
         watch: {
             initType(newValue, oldValue) {
-                console.log(newValue, oldValue)
+                // console.log(newValue, oldValue)
             }
         },
         computed: {
+            icP() {
+                let icon = null
+                if (this.password || this.clear) {
+                    icon = 'right'
+                } else {
+                    icon = this.icon ? this.iconPosition : ''
+                }
+                return icon
+            },
+            classObj(){
+                let _classes=(this.disabled?'disabled':'')+' '+(this.readonly?'readonly':'')
+                console.log(this.readonly,'---',_classes,'===',this.readonly?'readonly':'')
+                return _classes
+            },
             types() {
                 let type = this.type;
                 switch (this.type) {
@@ -88,7 +102,6 @@
                         this.password = this.type
                         break;
                 }
-                console.log(type)
                 return type
             }
         },
@@ -105,6 +118,9 @@
             handleChange(e) {
 
             },
+            handleClearInput(e){
+                this.value=''
+            },
             handleShowPassword(e) {
                 if (this.types === 'password') {
                     this.type = 'text'
@@ -118,45 +134,68 @@
 </script>
 
 <style lang='scss' scoped>
-.z-input {
-    display: inline-flex;
-    align-items: center;
-    /*border: 1px solid black;*/
-    position: relative;
+    .z-input {
+        display: inline-flex;
+        box-sizing: border-box;
+        align-items: center;
+        /*border: 1px solid black;*/
+        position: relative;
 
-    .input-self {
-        display: block;
-        color: $--input-font-color;
-        background-color: $--input-background-color;
-        font-size: 14px;
-        border-radius: $--input-border-radius;
-        width: $--input-width;
-        line-height: 40px;
-        height: 40px;
-        padding: 0 1em;
+        .input-self {
+            display: block;
+            color: $--input-font-color;
+            background-color: $--input-background-color;
+            font-size: 14px;
+            border-radius: $--input-border-radius;
+            box-sizing: border-box;
+            width: $--input-width;
+            line-height: 40px;
+            height: 40px;
+            padding: 0 1em;
+            /*box-sizing: border-box;*/
+        }
 
-    }
+        > .icon {
+            /*height: 40px;*/
+            display: block;
+            fill: $--input-font-color;
+            color: $--input-font-color;
+            position: absolute;
+        }
 
-    .icon {
-        height: 40px;
-        display: block;
-        fill: $--input-font-color;
-        color: $--input-font-color;
-        position: absolute;
-        right:5px;
-    }
-    .input-self.left+.icon{
-        left:5px;
-    }
+        > .input-self.right + .icon {
+            right: .5em;
+        }
 
-    .icon:hover, .icon:focus {
-        color: mix(#fff, $--input-font-color, 20%);
-        fill: mix(#fff, $--input-font-color, 20%);
-    }
+        > .input-self.left + .icon {
+            left: .5em;
+        }
 
-    .icon:active {
-        color: mix(#fff, $--input-font-color, 40%);
-        fill: mix(#fff, $--input-font-color, 40%);
+        > .input-self.left {
+            padding-left: 2em;
+        }
+
+        > .input-self.right {
+            padding-right: 2em;
+        }
+        >.disabled{
+            cursor:not-allowed;
+            color:$--input-disabled-color;
+            background-color:$--input-disabled-fill;
+            border: $--input-disabled-border;
+        }
+        >.readonly{
+            cursor: not-allowed;
+            color:$--input-disabled-color;
+        }
+        > .icon:hover, .icon:focus {
+            color: mix(#fff, $--input-font-color, 20%);
+            fill: mix(#fff, $--input-font-color, 20%);
+        }
+
+        > .icon:active {
+            color: mix(#fff, $--input-font-color, 40%);
+            fill: mix(#fff, $--input-font-color, 40%);
+        }
     }
-}
 </style>

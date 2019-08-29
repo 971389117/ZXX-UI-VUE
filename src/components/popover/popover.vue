@@ -12,10 +12,7 @@
      </span>
     </div>
 </template>
-<!--
-1.普通插槽
-2.命名插槽
--->
+
 <script>
     export default {
         name: 'popover',

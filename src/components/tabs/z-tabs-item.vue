@@ -44,8 +44,6 @@
                 this.eventBus.$emit('update:selected', this.name)
             }
         }
-
-
     }
 </script>
 
@@ -53,9 +51,12 @@
     .z-tabs-item {
         flex-shrink: 0;
         padding: 0 1em;
-
+        display: inline-flex;
+        align-items: center;
         &.active {
-            background-color: red;
+            /*color:*/
+            border-bottom:1px solid blue;
+            transform: translateY(1px);
         }
     }
 </style>

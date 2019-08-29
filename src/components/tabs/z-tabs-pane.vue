@@ -40,8 +40,8 @@
 
 <style lang='scss' scoped>
     .z-tabs-pane {
+        padding: 0 1em;
         &.active {
-            background-color: red;
         }
     }
 </style>

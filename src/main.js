@@ -22,7 +22,6 @@ import plugin from './components/toast/plugin'
 Vue.use(plugin)
 
 
-
 import Popover from './components/popover/popover'
 Vue.component('z-popover',Popover)
 import collapse from './components/collapse/z-collapse'

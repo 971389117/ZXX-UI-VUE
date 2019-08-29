@@ -13,7 +13,7 @@
 
 <script>
     export default {
-        name: 'collapse-item',
+        name: 'z-collapse-item',
         props: {
             title: {
                 type: String,
