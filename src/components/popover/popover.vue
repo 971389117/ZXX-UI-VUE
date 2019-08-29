@@ -110,23 +110,23 @@
                 contentWrapper.style.left = positions[this.position].left + 'px'
                 contentWrapper.style.top = positions[this.position].top + 'px'
 
+            },
+            removePopoverListeners() {
+                if (this.trigger === 'click') {
+                    this.$refs.popover.removeEventListener('click', this.onClick)
+                } else {
+                    this.$refs.popover.removeEventListener('mouseenter', this.open)
+                    this.$refs.popover.removeEventListener('mouseleave', this.close)
+                }
+            },
+            putBackContent() {
+                const {contentWrapper, popover} = this.$refs
+                if (!contentWrapper) {
+                    return
+                }
+                popover.appendChild(contentWrapper)
             }
         },
-        removePopoverListeners() {
-            if (this.trigger === 'click') {
-                this.$refs.popover.removeEventListener('click', this.onClick)
-            } else {
-                this.$refs.popover.removeEventListener('mouseenter', this.open)
-                this.$refs.popover.removeEventListener('mouseleave', this.close)
-            }
-        },
-        putBackContent() {
-            const {contentWrapper, popover} = this.$refs
-            if (!contentWrapper) {
-                return
-            }
-            popover.appendChild(contentWrapper)
-        }
     }
 </script>
 
