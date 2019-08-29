@@ -15,7 +15,7 @@
 
 <script>
     export default {
-        name: 'popover',
+        name: 'z-popover',
         props: {
             position: {
                 type: String,

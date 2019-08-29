@@ -4,6 +4,7 @@ import button from './components/button';
 import input from './components/input';
 import tabs from './components/tabs';
 import popover from './components/popover';
+import toast from './components/toast';
 import collapse from './components/collapse';
 
 
@@ -15,7 +16,8 @@ const components = [
     input,
     ...tabs,
     popover,
-    collapse
+    ...collapse,
+    toast
 ]
 
 // 一次性
@@ -34,4 +36,5 @@ export {
     tabs,
     popover,
     collapse,
+    toast
 }
