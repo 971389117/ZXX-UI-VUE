@@ -22,6 +22,8 @@
 </script>
 
 <style lang='scss' scoped>
+    @import "../../scss/settings";
+
     $tab-height:40px;
     .z-tabs-head {
         display: flex;

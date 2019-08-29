@@ -60,7 +60,7 @@
     }
 </script>
 <style lang="scss" >
-    @import "../icon/icon.css";
+        @import "../icon/icon.css";
     .z-button{
         color:black;
     }

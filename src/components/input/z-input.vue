@@ -4,26 +4,25 @@
 -->
 <template>
     <div>
-        <div class="z-input">
-            <input ref='input'
-                   v-model="value"
-                   :class="[icP,classObj]"
-                   :type="types"
-                   class="input-self" :placeholder="placeholder"
-                   :disabled="disabled"
-                   :readonly="readonly"
-                   @input="handleInput"
-                   @focus="handleFocus"
-                   @blur="handleBlur"
-                   @change="handleChange"
-            >
-            <span class="icon">
+    <div class="z-input">
+        <input ref='input'
+               v-model="value"
+               :class="[icP,classObj]"
+               :type="types"
+               class="input-self" :placeholder="placeholder"
+               :disabled="disabled"
+               :readonly="readonly"
+               @input="handleInput"
+               @focus="handleFocus"
+               @blur="handleBlur"
+               @change="handleChange"
+        >
+        <span class="icon">
             <Icon v-if="clear" icon="clear" @click="handleClearInput">X</Icon>
             <Icon v-else-if="password" icon="eye" @click="handleShowPassword"></Icon>
             <Icon v-else-if="icon" :icon="icon"></Icon>
         </span>
-        </div>
-    </div>
+    </div></div>
 </template>
 
 <script>
@@ -86,9 +85,9 @@
                 }
                 return icon
             },
-            classObj(){
-                let _classes=(this.disabled?'disabled':'')+' '+(this.readonly?'readonly':'')
-                console.log(this.readonly,'---',_classes,'===',this.readonly?'readonly':'')
+            classObj() {
+                let _classes = (this.disabled ? 'disabled' : '') + ' ' + (this.readonly ? 'readonly' : '')
+                console.log(this.readonly, '---', _classes, '===', this.readonly ? 'readonly' : '')
                 return _classes
             },
             types() {
@@ -118,8 +117,8 @@
             handleChange(e) {
 
             },
-            handleClearInput(e){
-                this.value=''
+            handleClearInput(e) {
+                this.value = ''
             },
             handleShowPassword(e) {
                 if (this.types === 'password') {
@@ -134,6 +133,8 @@
 </script>
 
 <style lang='scss' scoped>
+    @import "../../scss/settings";
+
     .z-input {
         display: inline-flex;
         box-sizing: border-box;
@@ -178,16 +179,19 @@
         > .input-self.right {
             padding-right: 2em;
         }
-        >.disabled{
-            cursor:not-allowed;
-            color:$--input-disabled-color;
-            background-color:$--input-disabled-fill;
+
+        > .disabled {
+            cursor: not-allowed;
+            color: $--input-disabled-color;
+            background-color: $--input-disabled-fill;
             border: $--input-disabled-border;
         }
-        >.readonly{
+
+        > .readonly {
             cursor: not-allowed;
-            color:$--input-disabled-color;
+            color: $--input-disabled-color;
         }
+
         > .icon:hover, .icon:focus {
             color: mix(#fff, $--input-font-color, 20%);
             fill: mix(#fff, $--input-font-color, 20%);

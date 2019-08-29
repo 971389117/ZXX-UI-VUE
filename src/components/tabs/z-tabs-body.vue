@@ -17,6 +17,6 @@
 
 <style lang='scss' scoped>
     .z-tabs-body {
-
+        margin: 1.2em 0;
     }
 </style>
