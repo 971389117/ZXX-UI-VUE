@@ -4,7 +4,7 @@
             <div class="row">
                 <h4>基本按钮</h4>
                 <z-button>默认按钮</z-button>
-                    <z-button autofocus type="primary">主要按钮</z-button>
+                <z-button autofocus type="primary">主要按钮</z-button>
                 <z-button type="success">成功按钮</z-button>
                 <z-button type="info">信息按钮</z-button>
                 <z-button type="warning">警告按钮</z-button>
@@ -118,11 +118,10 @@
     import {button} from '../../../src/index'
     import Vue from 'vue'
 
+    Vue.use(button)
     export default {
         name: 'ZXButton',
-        components: {
-            'z-button': button
-        }
+        components: {}
     }
 </script>
 

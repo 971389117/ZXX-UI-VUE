@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
-    "element-ui": "^2.11.1",
     "vue": "^2.6.10"
   },
   "devDependencies": {
@@ -28,10 +27,7 @@
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
-    "vue-cli-plugin-awesome-scss-base": "^0.0.2",
-    "vue-cli-plugin-awesome-vuepress": "^0.0.5",
-    "vue-template-compiler": "^2.6.10",
-    "vuepress": "^1.0.3"
+    "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
     "root": true,

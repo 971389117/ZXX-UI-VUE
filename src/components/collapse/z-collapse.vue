@@ -3,9 +3,11 @@
 @create 2019-08-09-12:14
 -->
 <template>
+    <ClientOnly>
     <div class="z-collapse">
         <slot></slot>
     </div>
+    </ClientOnly>
 </template>
 
 <script>
