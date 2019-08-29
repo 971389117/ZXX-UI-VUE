@@ -20,16 +20,19 @@
 ### 设计
 
 工具
-1. sektch.app , (语雀)[https://www.yuque.com]
+- sektch.app , [语雀](https://www.yuque.com)
 
 方式
-确定需求,程序流程,搭建骨架,测试,使用
+
+- 确定需求,程序流程,搭建骨架,测试,使用
 
 ### 配色
 
 最简单的方式是[黑白灰]经典配色,其次可以参考别人成品配色,或者色卡等.下面是一些配色方案.
-(阮一峰 - 普通人的网页配色方案)[http://www.ruanyifeng.com/blog/2019/03/coloring-scheme.html]
-(配色网站 - kuler)[https://color.adobe.com/create]
+
+[阮一峰 - 普通人的网页配色方案](http://www.ruanyifeng.com/blog/2019/03/coloring-scheme.html)
+
+[配色网站 - kuler](https://color.adobe.com/create)
 另外, 在 少数派 等网站上存在着很多配色攻略,可以自行搜索.
 
 ### 网站开发流程
@@ -87,8 +90,8 @@
 
 ## 发散思维
 
-(写给大家看的设计书)[https://book.douban.com/subject/3323633/]
-(用户体验的要素)[https://book.douban.com/subject/2297549/]
+[写给大家看的设计书](https://book.douban.com/subject/3323633/)
+[用户体验的要素](https://book.douban.com/subject/2297549/)
 
 ### 做一个优秀的程序员
 
@@ -98,23 +101,23 @@
 
 我在写代码的时候,由于想要带有一点"处女座"求全思想,有时候存在"设计过度"的问题.**在生活中以及写代码的方方面面,我们应该从需求出发,落到实际,既要高瞻远瞩,走一步看五步,也要避免落入过度思考,忧虑过剩的陷阱,导致浪费不必要的投入.**
 
-### 代码方面的自约定
+### 代码自约定
 
-1.不写废话搬的注释
-2.变量名做到见名知意,尽量用英文,如果实在有问题可以用拼音代替
-3.使用小的功能函数拆分大段代码块
-4.代码整洁干净,易于阅读(就好像小时候写作文,要求卷面干净)
-5.不断重构,优化代码,使代码没有一眼看上去看不懂的代码
+1. 不写废话搬的注释
+2. 变量名做到见名知意,尽量用英文,如果实在有问题可以用拼音代替
+3. 使用小的功能函数拆分大段代码块
+4. 代码整洁干净,易于阅读(就好像小时候写作文,要求卷面干净)
+5. 不断重构,优化代码,使代码没有一眼看上去看不懂的代码
 
 ### 参考资源
 市面上成熟的 UI 框架,更多可以自行搜索 github 等.
 
-(Framework7)[https://framework7.io/docs/button.html]
-(Ant Design)[https://ant.design/docs/react/introduce-cn]
-(Element UI)[http://element.eleme.io/#/zh-CN/component/installation]
-(iView)[https://www.iviewui.com/docs/guide/install]
+[Framework7](https://framework7.io/docs/button.html)
+[Ant Design](https://ant.design/docs/react/introduce-cn)
+[Element UI](http://element.eleme.io/#/zh-CN/component/installation)
+[iView](https://www.iviewui.com/docs/guide/install)
 
 方方的资源
 
-(自制 UI 框架 教程)[https://xiedaimala.com/courses/231c66ec-c3e1-42f2-bfd0-5a9470a8a38a#/common]
-(语雀设计稿)[https://www.yuque.com/u29422/gulu/197281/measure]
+[自制 UI 框架 教程](https://xiedaimala.com/courses/231c66ec-c3e1-42f2-bfd0-5a9470a8a38a#/common)
+[语雀设计稿](https://www.yuque.com/u29422/gulu/197281/measure)
