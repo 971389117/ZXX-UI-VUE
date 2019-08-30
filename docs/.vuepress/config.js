@@ -41,12 +41,12 @@ module.exports = {
                 title: '组件',
                 collapsable: false,
                 children: [
-                    // '/components/button',
-                    // '/components/tabs',
-                    // '/components/input',
-                    // '/components/collapse',
+                    '/components/button',
+                    '/components/tabs',
+                    '/components/input',
+                    '/components/collapse',
                     '/components/popover',
-                    // '/components/toast',
+                    '/components/toast',
                 ]
             },
         ]

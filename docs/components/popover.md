@@ -1,6 +1,6 @@
 # popover
 
-<ZXToast></ZXToast>
+<ZXPopover></ZXPopover>
 
 ```html
 <!--悬浮-->
