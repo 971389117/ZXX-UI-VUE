@@ -3,6 +3,7 @@
 @create 2019-08-08-23:40
 -->
 <template>
+<ClientOnly>
     <div class="wrapper" :class="toastClasses">
         <div class="z-toast" ref="toast">
             <div class="message">
@@ -15,6 +16,7 @@
         </span>
         </div>
     </div>
+    </ClientOnly>
 </template>
 
 <script>

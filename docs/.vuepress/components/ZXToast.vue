@@ -1,16 +1,15 @@
 <template>
     <div class="toast">
-        <z-button type="primary" @click="showToast('top')">点我 TOP</z-button>
+        <!-- <z-button type="primary" @click="showToast('top')">点我 TOP</z-button>
         <z-button type="primary" @click="showToast('middle')">点我 MIDDLE</z-button>
-        <z-button type="primary" @click="showToast('bottom')">点我 BOTTOM</z-button>
+        <z-button type="primary" @click="showToast('bottom')">点我 BOTTOM</z-button> -->
     </div>
 </template>
 
 <script>
-    import {toast,button} from '../../../src/index'
+    import {toast} from '../../../src/index'
     import Vue from 'vue'
     Vue.use(toast)
-    Vue.use(button)
     export default {
         name: 'zx-toast',
         created(){
